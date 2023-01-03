@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #040924;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.card {
+  background: #FFFF;
+  padding: 4.8rem 6.4rem 6.4rem;
+  margin-top: -12rem;
+
+  box-shadow: 0rem .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+
+  max-width: 42.8rem;
+}
+
+.card h1 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  color: #0C3440;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  margin: 3.2rem 0;
+}
+
+label {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  color: #00453A;
+  padding-bottom: .8rem;
+}
+
+.height {
+  margin-top: 1.6rem;
+}
+
+#inputWeight,
+#inputHeight {
+  width: 30.0rem;
+  height: 5.2rem;
+
+  background: #DCE2E9;
+
+  border-radius: .4rem;
+  border: none;
+}
+
+button {
+  font-family: 'Roboto';
+  font-weight: 700;
+  line-height: 2rem;
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  background: #02799D;
+  border-radius: 4px;
+  padding: 1.6rem;
+  border: none;
+
+  Width: 30.0rem;
+  Height: 5.2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+
+button:hover {
+  background: #02799d85;
+  cursor: pointer;
+}
