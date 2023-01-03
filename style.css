@@ -6,11 +6,24 @@
 
 :root {
   font-size: 62.5%;
+
+  /*Font-size*/
+  --fs-body: 1.6rem;
+  --fs-heading: 3.2rem;
+  --fs-label: 1.4rem;
+
+  /*Colors*/
+  --tt-heading: #0C3440;
+  --label-color: #00453A;
+  --bg-body: #040924;
+  --bg-input: #DCE2E9;
+  --bg-button: #02799D;
 }
 
 body {
-  background: #040924;
-  font-size: 1.6rem;
+  background: var(--bg-body);
+  font-family: 'Roboto';
+  font-size: var(--fs-body);
 }
 
 .container {
@@ -31,12 +44,11 @@ body {
 }
 
 .card h1 {
-  font-family: 'Roboto';
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: var(--fs-heading);
   line-height: 4rem;
 
-  color: #0C3440;
+  color: var(--tt-heading);
 }
 
 form {
@@ -47,12 +59,11 @@ form {
 }
 
 label {
-  font-family: 'Roboto';
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: var(--fs-label);
   line-height: 1.8rem;
 
-  color: #00453A;
+  color: var(--label-color);
   padding-bottom: .8rem;
 }
 
@@ -65,14 +76,13 @@ label {
   width: 30.0rem;
   height: 5.2rem;
 
-  background: #DCE2E9;
+  background: var(--bg-input);
 
   border-radius: .4rem;
   border: none;
 }
 
 button {
-  font-family: 'Roboto';
   font-weight: 700;
   line-height: 2rem;
 
@@ -80,7 +90,7 @@ button {
 
   color: #FFFFFF;
 
-  background: #02799D;
+  background: var(--bg-button);
   border-radius: 4px;
   padding: 1.6rem;
   border: none;
