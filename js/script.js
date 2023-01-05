@@ -1,22 +1,9 @@
+import {Modal} from './modal.js'
 const form = document.querySelector('form')
 const inputWeight = document.querySelector('#inputWeight')
 const inputHeight = document.querySelector('#inputHeight')
 
 form.onsubmit = handleSubmit
-
-const Modal = {
-  wrapper: document.querySelector('.modal-wrapper'),
-  message: document.querySelector('.modal .title span'),
-  buttonClose: document.querySelector('.modal button.close'),
-  
-  open() {
-    Modal.wrapper.classList.add('open')
-  },
-
-  close() {
-    Modal.wrapper.classList.remove('open')
-  }
-}
 
 function handleSubmit (event) {
   event.preventDefault()
@@ -31,9 +18,8 @@ function handleSubmit (event) {
   Modal.open()
 }
 
-Modal.buttonClose.onclick = () => Modal.close()
-
 function IMC(weight, height) {
   let result = (weight / ((height / 100) ** 2)).toFixed(1) 
   return result
 }
+
