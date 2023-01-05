@@ -8,6 +8,7 @@ const inputHeight = document.querySelector('#inputHeight')
 
 form.onsubmit = handleSubmit
 
+
 function handleSubmit (event) {
   event.preventDefault()
 
@@ -21,11 +22,11 @@ function handleSubmit (event) {
     return;
   } 
 
-  AlertError.close()
-
   const result = calculateBMI(weight, height)
   displayResultMessage(result)
 }
+
+form.oninput = () => AlertError.close()
 
 function displayResultMessage (result) {
   const message = `Your BMI is ${result}`
