@@ -1,19 +1,20 @@
 const form = document.querySelector('form')
 const inputWeight = document.querySelector('#inputWeight')
 const inputHeight = document.querySelector('#inputHeight')
-const modalWrapper = document.querySelector('.modal-wrapper')
-const modalMessage = document.querySelector('.modal .title span')
-const modalBtnClose = document.querySelector('.modal button.close')
 
 form.onsubmit = handleSubmit
 
 const Modal = {
+  wrapper: document.querySelector('.modal-wrapper'),
+  message: document.querySelector('.modal .title span'),
+  buttonClose: document.querySelector('.modal button.close'),
+  
   open() {
-    modalWrapper.classList.add('open')
+    Modal.wrapper.classList.add('open')
   },
 
   close() {
-    modalWrapper.classList.remove('open')
+    Modal.wrapper.classList.remove('open')
   }
 }
 
@@ -26,11 +27,11 @@ function handleSubmit (event) {
   const result = IMC(weight, height)
   const message = `Your BMI is ${result}`
   
-  modalMessage.innerText = message
+  Modal.message.innerText = message
   Modal.open()
 }
 
-modalBtnClose.onclick = () => Modal.close()
+Modal.buttonClose.onclick = () => Modal.close()
 
 function IMC(weight, height) {
   let result = (weight / ((height / 100) ** 2)).toFixed(1) 
