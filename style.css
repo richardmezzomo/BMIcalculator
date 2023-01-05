@@ -170,14 +170,14 @@ form button:hover {
 }
 
 
-/*Alert-box*/
-.alert-box.open {
+/*Alert-error*/
+.alert-error.open {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
 
-.alert-box {
+.alert-error {
   background: var(--bg-error);
   color: var(--tt-error);
   
