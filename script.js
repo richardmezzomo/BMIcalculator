@@ -7,6 +7,16 @@ const modalBtnClose = document.querySelector('.modal button.close')
 
 form.onsubmit = handleSubmit
 
+const Modal = {
+  open() {
+    modalWrapper.classList.add('open')
+  },
+
+  close() {
+    modalWrapper.classList.remove('open')
+  }
+}
+
 function handleSubmit (event) {
   event.preventDefault()
 
@@ -17,10 +27,10 @@ function handleSubmit (event) {
   const message = `Your BMI is ${result}`
   
   modalMessage.innerText = message
-  modalWrapper.classList.add('open')
+  Modal.open()
 }
 
-modalBtnClose.onclick = () => modalWrapper.classList.remove('open')
+modalBtnClose.onclick = () => Modal.close()
 
 function IMC(weight, height) {
   let result = (weight / ((height / 100) ** 2)).toFixed(1) 
