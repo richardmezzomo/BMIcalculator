@@ -13,7 +13,8 @@ Table of Contents
 
 ### ☑️ About
 
-I developed this website that focuses on showing the user's BMI and classifying them according to their weight and height.
+I developed this site that focuses on showing the user's BMI and classifying them according to their weight and height.
+In development I used some knowledge acquired in the Rockearseat JS course such as ES6 modules, functions, Arrow functions and etc.
 
 ### 💻 Link
 
